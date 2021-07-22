@@ -26,6 +26,6 @@ func TestUserService_Create(t *testing.T) {
 	newUser, err := userService.Create(u)
 	assert.NoError(t, err)
 	assert.NotNil(t, newUser)
-	// assert.Equal(t, userData, newUser)
+	assert.Equal(t, userData, newUser)
 	userRepository.Mock.AssertExpectations(t)
 }
